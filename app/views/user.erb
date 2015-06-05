@@ -1,0 +1,14 @@
+
+  <h1>Welcome to Flickr, <%= @user.username %>!</h1>
+
+  <a href="/users/<%= @user.id %>/albums">Create Your Album</a>
+
+
+<a href="/users/<% @user.id %>/albums%>"><p>Here is your album</p></a>
+
+
+
+  <% @photos.order(id: :desc).each do |x| %>
+  <p><img src="<%= x.file.url%>"></img></p>
+  <% end %>
+

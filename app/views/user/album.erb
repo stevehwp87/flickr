@@ -1,0 +1,18 @@
+<h1>Create an album</h1>
+
+
+  <form action="/users/<%= @user.id %>/album" method="post">
+  <input type="text" name="name" placeholder="Album name">
+  <input type="submit" value="Create Album">
+  </form>
+
+
+<% @album.order(id: :desc).each do |x| %>
+  <p><%= x.name %></p>
+
+
+  <% x.photos.order(id: :desc).each do |x| %>
+  <p><img src="<%= x.file.url%>"></img></p>
+  <% end %>
+
+<% end %>

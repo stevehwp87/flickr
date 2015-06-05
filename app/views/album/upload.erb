@@ -1,0 +1,6 @@
+<h1>Please upload your photo here</h1>
+
+<form action="/<%= @album.id %>/photos" method="post" enctype="multipart/form-data">
+  <input type="file" name="image">
+  <input type='submit' value='Upload!'>
+</form>

@@ -1,0 +1,9 @@
+
+  <h1>Welcome to Flickr!</h1>
+
+<a href="/login">Please click here to sign in</a>
+<a href="/login">Please click here to sign up</a>
+
+ <% @photos.order(id: :desc).each do |x| %>
+  <p><img src="<%= x.file.url%>"></img></p>
+  <% end %>
